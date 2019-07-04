@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="gb2312">
+</head>
+
+<body>
+    <h2>NaN 就是指不是数字，但类型是个number</h2>
+    <h2>Infinity 是一个数超过最大值就是它，除以0也会是它，它的类型也是number</h2>
+    <h2>请自己查看Console打印</h2>
+
+
+    <script>
+        var x = 100 / "Apple";
+        console.log("var x = " + isNaN(x));               // 返回 true，因为 x 不是数
+
+        var x = NaN;
+        var y = 5;
+        var z = x + y;         // z 将是 NaN
+        console.log("var x = " + isNaN(z));               // 返回 true，因为 x 不是数
+
+
+        var myNumber = 2;
+
+        while (myNumber != Infinity) {          // 执行直到 Infinity
+            myNumber = myNumber * myNumber;
+        }
+        console.log("myNumber = " + myNumber);
+
+        var myNumber = 2 / 0;
+        console.log("myNumber = " + myNumber);
+
+        console.log("typeof(Infinity) = " + typeof (Infinity));
+    </script>
+</body>
+</html>

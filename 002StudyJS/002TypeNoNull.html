@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="gb2312">
+</head>
+
+<body>
+    <h2>JavaScript 数据类型</h2>
+
+    <p>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var person = {firstName:"Bill", lastName:"Gates", age:62, eyeColor:"blue"};
+        person = undefined;
+        document.getElementById("demo").innerHTML = person;
+
+        var person2 = null; // 类型会是object，因为null用来清空对象
+        document.getElementById("demo2").innerHTML = "typeof(person2) = " + typeof (person2);
+    </script>
+</body>
+</html>
